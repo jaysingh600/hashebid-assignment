@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Survey</title>
+</head>
+<body>
+    <form id="survey-form">
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" value="0" oninput="ageChange()">
+        </div>
+        <div>
+            <input type="checkbox" id="own-phone" name="own-phone">
+            <label for="own-phone">Do you own a phone?</label>
+        </div>
+        <div id="errors-holder" style="color: red;"></div>
+        <div id="result-holder" style="color: green;"></div>
+        <button type="button" id="submit-button" onclick="handleSubmit()">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('submit-button'); 
+});
+
+function ageChange() {
+    const ageInput = document.getElementById('age');
+    const errorHolder = document.getElementById('errors-holder');
+    const submitButton = document.getElementById('submit-button');
+
+    const age = parseInt(ageInput.value, 10);
+
+    if (isNaN(age) || age < 5) {
+        errorHolder.textContent = 'You need to be at least 5 years old to participate';
+        submitButton.disabled = true;
+    } else {
+        errorHolder.textContent = '';
+        submitButton.disabled = false;
+    }
+}
+
+function handleSubmit() {
+    const ageInput = document.getElementById('age');
+    const ownPhoneInput = document.getElementById('own-phone');
+    const errorHolder = document.getElementById('errors-holder');
+    const resultHolder = document.getElementById('result-holder');
+
+    const age = parseInt(ageInput.value, 10);
+
+    if (isNaN(age) || age === 0) {
+        errorHolder.textContent = 'Please choose age';
+        return;
+    }
+
+    errorHolder.textContent = ''; // Clear any existing error messages
+
+    if (ownPhoneInput.checked) {
+        if (age < 13) {
+            resultHolder.textContent = 'You are too young to have a phone';
+        } else {
+            resultHolder.textContent = 'Use your phone in moderation';
+        }
+    } else {
+        if (age < 13) {
+            resultHolder.textContent = 'You will get a phone soon';
+        } else {
+            resultHolder.textContent = 'You should get a phone';
+        }
+    }
+}
+
+    </script>
+</body>
+</html>

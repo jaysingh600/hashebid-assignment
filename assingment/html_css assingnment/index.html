@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple web page</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: aqua;
+
+
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .social-icons .icon {
+        margin-right: 20px;
+          
+        }
+
+        .centre-1 {
+            text-align: center;
+        }
+
+
+
+        .navbar {
+            background-color: aquamarine;
+            display: block;
+        }
+
+        .aside {
+            background-color: rgb(238, 124, 124);
+            width: 20%;
+            height: 401.5px;
+            float: left;
+
+        }
+
+        .aside-heading {
+            text-align: center;
+        }
+
+        .para {
+            padding: 10px;
+        }
+
+
+
+        .main {
+            background-color: rgb(185, 130, 237);
+            float: right;
+            width: 80%;
+            height: auto;
+            display: flex;
+
+
+        }
+
+        #box {
+            border: 4px solid rgb(144, 122, 242);
+            padding: 20px;
+            margin-right: 142px;
+            margin-left: 10px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        li {
+
+            list-style: none;
+            padding: 15px;
+            font-weight: bold;
+            margin-right: 30px;
+
+
+
+        }
+
+        li:hover {
+            background-color: rgb(33, 228, 209);
+        }
+
+        .img-title {
+            text-align: center;
+            font-family: cursive;
+            color: rgb(50, 7, 243);
+        }
+
+        .footer {
+            background-color: aqua;
+            width: 100%;
+            height: auto;
+            clear: both;
+
+        }
+
+        .centre {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="./image/food.svg" width="50px" height="50px" alt="logo" class="logo">
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <img src="./image/facebook.svg" width="50px" height="50px" alt="logo" class="icon"> 
+                </a>
+                <a href="#">
+                    <img src="./image/twitter.svg" alt="twitter" width="50px" height="50px" class="icon">
+
+                </a>
+                <a href="#">
+                    <img src="./image/instagram.svg" alt="instagram" width="50px" height="50px" class="icon">
+
+                </a>
+            </div>
+
+        </header>
+
+        <navbar class="navbar">
+            <ul>
+                <li>home</li>
+                <li>about us</li>
+                <li>contact</li>
+                <li>services</li>
+            </ul>
+        </navbar>
+
+        <aside class="aside">
+            <h2 class="aside-heading">Content</h2>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque dignissimos,
+                est sed repellendus asperiores voluptates deleniti incidunt corporis quisquam beatae
+                laboriosam quidem consectetur sint eaque numquam. Harum, magni necessitatibus?</p>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sunt pariatur totam
+                blanditiis! Consectetur, eveniet sint explicabo odit nostrum soluta earum et mollitia
+                vel a laborum ipsam architecto asperiores doloribus!</p>
+
+        </aside>
+
+        <main class="main">
+            <div id="box">
+                <img src="./image/burger.avif" width="250px" height="150px" alt="">
+                <h2 class="img-title">Burger</h2>
+                <p>Burger is a sandwich made with bread, a meat patty,lettuce and tomatoes
+                    with variations depending on the maker. You have animal protein,
+                    vegetables and a carb. So the best way to describe a burger would be a quick lunch on the go.</p>
+            </div>
+
+            <div id="box">
+                <img src="./image/pizza.jpeg" width="250px" height="150px" alt="">
+                <h2 class="img-title">Pizza</h2>
+                <p>pizza, dish of Italian origin consisting of a flattened disk
+                    of bread dough topped with some combination of olive oil, oregano,
+                    tomato, olives, mozzarella or other cheese, and many other ingredients,
+                    baked quickly—usually, in a commercial setting, using a wood-fired oven heated
+                    to a very high temperature—and served hot </p>
+            </div>
+
+            <div id="box">
+                <img src="./image/salad.png" width="250px" height="150px" alt="">
+                <h2 class="img-title">Salad</h2>
+                <p>The term “salad” comes from the Latin word for salt (“sal”). In Roman times,
+                    salads consisted largely of salted vegetables glazed with
+                    an oil and vinegar dressing. Thus the salt. The French eventually coined
+                    the term “salade” which is where we got it.</p>
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            <div class="centre">
+                copyright &copy; www.onlinemeal.com | alright <span>all reserved</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

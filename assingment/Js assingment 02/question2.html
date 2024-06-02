@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question2
+
+    </title>
+</head>
+
+<body>
+    <p>2. Write a function to calculate which can add, subtract, multiply and divide two numbers. Use switch inside
+        function. </p>
+
+</body>
+<script>
+    function calculate(operator, num1, num2) {
+        let result;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+
+                result = num1 / num2;
+
+                break;
+            default:
+                result = "Invalid operator";
+        }
+
+        return result;
+    }
+
+    console.log(calculate('+', 5, 3));
+    console.log(calculate('-', 5, 3));
+    console.log(calculate('*', 5, 3));
+    console.log(calculate('/', 5, 3));
+
+
+
+</script>
+
+</html>
